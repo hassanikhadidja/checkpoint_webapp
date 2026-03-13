@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Nexus Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css"/>
+  <style>
+    .success-banner {
+      display: none;
+      background: rgba(0,200,100,0.08);
+      border: 1px solid rgba(0,200,100,0.3);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #00c864;
+      font-size: 0.92rem;
+    }
+    .contact-info-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .ci-icon {
+      width: 40px; height: 40px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .ci-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.2rem; }
+    .ci-value { font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">NEXUS<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/services">Our Services</a></li>
+    <li><a href="/contact" class="active">Contact Us</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ─── Hero ───────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="eyebrow">Get In Touch</div>
+    <h1>Let's<br/><em>Talk.</em></h1>
+    <p class="hero-body">
+      Have a project in mind? A question? Just want to say hi?
+      Drop us a message and we'll get back to you within one business day.
+    </p>
+    <div style="position:absolute;right:-2rem;bottom:-3rem;font-family:'Bebas Neue',sans-serif;font-size:clamp(8rem,22vw,18rem);color:rgba(255,80,0,0.04);line-height:1;pointer-events:none;user-select:none;">HELLO</div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ─── Contact Block ───────────────────────────────────────── -->
+  <section class="section">
+    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;">
+
+      <!-- Left: info -->
+      <div class="fade-up">
+        <div class="eyebrow" style="margin-bottom:1.5rem;">Contact Info</div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">Address</div>
+            <div class="ci-value">12 Rue Didouche Mourad<br/>Algiers, DZ 16000</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon">📧</div>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-value">hello@nexusstudio.io</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-label">Phone</div>
+            <div class="ci-value">+213 21 000 000</div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="ci-icon">⏰</div>
+          <div>
+            <div class="ci-label">Working Hours</div>
+            <div class="ci-value">Mon – Fri<br/>9:00 AM – 5:00 PM</div>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div style="border:1px solid var(--border);height:180px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;margin-top:0.5rem;background:var(--surface);">
+          📌 Algiers, Algeria
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="fade-up">
+        <div class="eyebrow" style="margin-bottom:1.5rem;">Send a Message</div>
+
+        <div class="success-banner" id="successBanner">
+          ✓ Message sent! We'll be in touch within one business day.
+        </div>
+
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="form-row">
+              <div class="field">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" placeholder="Amina" required/>
+              </div>
+              <div class="field">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" placeholder="Benali" required/>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="amina@company.com" required/>
+            </div>
+
+            <div class="field">
+              <label for="company">Company</label>
+              <input type="text" id="company" placeholder="Benali Corp (optional)"/>
+            </div>
+
+            <div class="field">
+              <label for="service">Service of Interest</label>
+              <select id="service">
+                <option value="">— Select a service —</option>
+                <option>Web Development</option>
+                <option>UI / UX Design</option>
+                <option>Mobile App</option>
+                <option>Brand Identity</option>
+                <option>Other / Not Sure Yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="budget">Estimated Budget</label>
+              <select id="budget">
+                <option value="">— Select a range —</option>
+                <option>Under €2,000</option>
+                <option>€2,000 – €5,000</option>
+                <option>€5,000 – €15,000</option>
+                <option>€15,000+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Your Message *</label>
+              <textarea id="message" placeholder="Tell us about your project — what you want to build, your timeline, and any context that helps us understand your needs." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Send Message →
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─────────────────────────────────────────────────── -->
+  <div class="divider"></div>
+  <section class="section" style="padding-bottom:5rem;">
+    <div class="eyebrow fade-up">FAQ</div>
+    <h2 class="section-title fade-up">Common <em>Questions</em></h2>
+    <div class="grid grid-2" style="margin-top:2rem;">
+      <div class="card fade-up">
+        <h3>How long does a typical project take?</h3>
+        <p>A standard website takes 4–6 weeks. Full-stack web apps or mobile projects usually run 8–16 weeks depending on scope. We give a detailed timeline during scoping.</p>
+      </div>
+      <div class="card fade-up">
+        <h3>Do you work with startups?</h3>
+        <p>Absolutely. Many of our clients are early-stage startups. We offer phased approaches to help you launch lean and iterate based on real user feedback.</p>
+      </div>
+      <div class="card fade-up">
+        <h3>What if I don't know what I need yet?</h3>
+        <p>That's fine — we'll figure it out together. A free discovery call with our team is the best first step, no obligations attached.</p>
+      </div>
+      <div class="card fade-up">
+        <h3>Do you offer ongoing maintenance?</h3>
+        <p>Yes. After the 90-day post-launch window, we offer monthly retainer packages covering updates, performance monitoring, and feature additions.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="logo">NEXUS<span>.</span></span>
+  <span>© 2026 Nexus Studio. All rights reserved.</span>
+  <span>Mon–Fri · 9:00–17:00</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Form submit
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!fname || !email || !message) {
+      alert('Please fill in the required fields (First Name, Email, Message).');
+      return;
+    }
+
+    const btn = this.querySelector('button[type=submit]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      document.getElementById('successBanner').style.display = 'block';
+      this.reset();
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      window.scrollTo({ top: document.getElementById('successBanner').offsetTop - 120, behavior: 'smooth' });
+    }, 1000);
+  });
+</script>
+</body>
+</html>
